@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JWST Proposal Explorer</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body data-page="home">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div>
+          <h1 class="brand-title">JWST Proposal Explorer</h1>
+          <p class="brand-subtitle">Browse approved JWST proposals across Cycles 1–5</p>
+        </div>
+        <nav class="nav-actions">
+          <a class="btn ghost" href="all.html">All List</a>
+          <a class="btn primary" href="detail.html">Detailed Info</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="metric-grid" data-metrics></section>
+
+      <section class="selector-grid" aria-label="Proposal category selector">
+        <div class="selector-column">
+          <div class="column-title">Program Type</div>
+          <div class="option-list" data-program-list></div>
+        </div>
+        <div class="selector-column">
+          <div class="column-title">Cycle / Subcategory</div>
+          <div class="option-list" data-cycle-list></div>
+        </div>
+        <div class="selector-column">
+          <div class="column-title">Science Category</div>
+          <div class="option-list" data-category-list></div>
+        </div>
+      </section>
+
+      <section class="filter-card">
+        <div class="filter-toolbar">
+          <div class="crumbs" data-crumbs></div>
+          <div class="search-line">
+            <input class="search-input" data-search type="search" placeholder="Filter proposals by title, PI, instrument...">
+            <span class="result-count" data-result-count></span>
+          </div>
+          <a class="btn ghost" data-go-all href="all.html">All List</a>
+          <a class="btn primary" data-go-detail href="detail.html">Detailed Info</a>
+        </div>
+        <div class="table-wrap" data-table></div>
+      </section>
+    </main>
+
+    <script src="data/proposals-data.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

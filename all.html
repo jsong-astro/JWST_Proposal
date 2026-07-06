@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JWST Proposal All List</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body data-page="all">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div>
+          <h1 class="brand-title">JWST Proposal All List</h1>
+          <p class="brand-subtitle">Search by proposal ID and filter by JWST instrument</p>
+        </div>
+        <nav class="nav-actions">
+          <a class="btn ghost" data-home-link href="index.html">Explorer</a>
+          <a class="btn primary" href="detail.html">Detailed Info</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell all-page">
+      <section class="list-panel">
+        <div class="all-toolbar">
+          <input class="search-input" data-id-search type="search" placeholder="Search proposal ID or title...">
+          <select class="select-input" data-instrument-filter aria-label="Filter by instrument"></select>
+          <span class="result-count" data-all-count></span>
+          <a class="btn ghost" href="index.html">Reset View</a>
+        </div>
+        <div class="table-wrap" data-all-table></div>
+      </section>
+    </main>
+
+    <script src="data/proposals-data.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
